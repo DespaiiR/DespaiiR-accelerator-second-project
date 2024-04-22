@@ -1,0 +1,123 @@
+.hero__wrapper {
+  position: relative;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.hero__list  {
+  padding: 0;
+  margin: 0;
+}
+
+.hero__pagination {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 180px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    max-width: initial;
+    justify-content: end;
+    bottom: 92px;
+  }
+}
+
+.hero__point {
+  list-style: none;
+  display: block;
+  width: 16px;
+  height: 16px;
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  border-radius: 50%;
+  z-index: 1;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.hero__point--active {
+  background-color: #ffffff;
+}
+
+.hero__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero__info-text {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 13px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.hero__info-text--moon {
+  &::before {
+    content: '';
+    mask-image: url("/__spritemap#sprite-moon-view");
+    mask-repeat: no-repeat;
+    mask-size: 11px;
+    background-color: #ffffff;
+    display: block;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+.hero__info-text--level {
+  &::before {
+    content: '';
+    mask-image: url("/__spritemap#sprite-level-view");
+    mask-repeat: no-repeat;
+    mask-size: 11px;
+    background-color: #ffffff;
+    display: block;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+li.hero__item {
+  backface-visibility: hidden;
+  visibility: hidden;
+  transition: visibility 1s;
+}
+
+li.hero__item--visible {
+  backface-visibility: visible;
+  visibility: visible;
+}

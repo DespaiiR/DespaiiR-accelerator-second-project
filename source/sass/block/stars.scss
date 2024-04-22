@@ -1,0 +1,20 @@
+.stars {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 16px;
+  width: auto;
+}
+
+.stars__out {
+  list-style: none;
+  background: url("/img/sprite/star-out.svg") center center no-repeat;
+  width: 15px;
+  height: 15px;
+}
+
+.stars__in {
+  background: url("/img/sprite/star-in.svg") center center no-repeat;
+}

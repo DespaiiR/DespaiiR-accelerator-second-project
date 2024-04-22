@@ -1,0 +1,236 @@
+.tours__wrapper {
+  width: 320px;
+  padding: 20px 15px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width)  {
+    width: 768px;
+    padding: 60px 45px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 122.5px 120px 100px;
+  }
+}
+
+.tours__title {
+  padding: 18.5px 0 0;
+  margin: 0 0 39.5px;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  color: #2d383f;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+    padding: 0;
+    margin: 0 0 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
+    margin: 0 0 50px;
+  }
+}
+
+.tours__title--shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  color: #2d383f;
+  z-index: 0;
+  opacity: 3%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 40px;
+    top: -15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
+    line-height: 55px;
+    top: -17px;
+  }
+}
+
+.tours__button {
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 37px;
+  height: 35px;
+  background-color: #0266c1;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: 16px 9px;
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    background-color: transparent;
+    outline: 1px solid #1c3374;
+    outline-offset: -1px;
+
+    &::before {
+      background-color: #1c3374;
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+
+    &::before {
+      background-color: #1c3374;
+    }
+  }
+
+  &:active {
+    background-color: #1c3374;
+
+    &::before {
+      background-color: #ffffff;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    top: 60px;
+    right: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 120px;
+    right: 120px;
+  }
+}
+
+.tours__button-prev {
+  right: 41px;
+
+  &::before {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 161px;
+  }
+}
+
+.tours__button-disabled {
+  pointer-events: none;
+  background-color: #999999;
+}
+
+.tours__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 14px;
+  color: #2d383f;
+  letter-spacing: 0.4px;
+
+  &::after {
+    content: '';
+    display: block;
+    mask-image: url("/__spritemap#sprite-small-arrow-view");
+    background-color: #2d383f;
+    mask-repeat: no-repeat;
+    mask-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+  }
+
+  &:hover {
+    color: rgba(2, 102, 193, 0.1);
+
+    &::after {
+      background-color: rgba(2, 102, 193, 0.1);
+    }
+  }
+
+  &:focus {
+    color: rgba(2, 102, 193, 1);
+
+    &::after {
+      background-color: rgba(2, 102, 193, 1);
+    }
+  }
+
+  &:active {
+    color: #1c3374;
+
+    &::after {
+      background-color: #1c3374;
+    }
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    color: #999999;
+
+    &::after {
+      background-color: #999999;
+    }
+  }
+
+  @media (min-width: $tablet-width)  {
+    font-size: 16px;
+    line-height: 16px;
+    gap: 12px;
+  }
+}
+
+.tours__swiper {
+  width: 290px;
+  overflow: hidden;
+  margin: 0 0 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    margin: 0 0 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    margin: 0 0 54px;
+  }
+}
+
+.tours__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+}

@@ -1,0 +1,15 @@
+.main {
+  position: relative;
+  background: url("/img/main-fon.webp") no-repeat;
+  background-position: 177px 568px;
+  background-size: 1200px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 339px 942px;
+    background-size: 2065px 1630px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 833px 674px;
+  }
+}

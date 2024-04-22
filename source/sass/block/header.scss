@@ -1,0 +1,79 @@
+.header {
+  background-color: #0266c1;
+  position: relative;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 15px;
+  gap: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 20px 45px;
+    align-items: center;
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 42px 120px;
+  }
+}
+
+.header__image {
+  @media (min-width: $tablet-width) {
+    flex-basis: 30%;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 206px;
+    text-align: center;
+  }
+}
+
+.header__phone {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  display: block;
+  flex-basis: 100%;
+  text-align: right;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    color: #2d383f;
+  }
+
+  &:active {
+    color: #1c3374;
+    opacity: 1;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    color: #999999;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 30%;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: auto;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
